@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contacts</title>
+    </head>
+    <body>
+        <h3><%= contact.name %></h3>
+        <form action="/contacts/<%= contact.name %>" method="POST">
+
+            <p>
+            <label>Name</label>
+            <input type="text" id="name" name="name" value="<%= contact.name %>" />
+            </p>
+
+            <p>
+            <label>Business</label>
+            <input type="text" id="business" name="business" value="<%= contact.business %>" />
+            </p>
+
+            <p>
+            <label>Phone</label>
+            <input type="text" id="phone" name="phone" value="<%= contact.phone %>" />
+            </p>
+            
+            <p>
+            <label>Email</label>
+            <input type="text" id="email" name="email" value="<%= contact.email %>" />
+            </p>
+            
+            <p>
+            <label>Address</label>
+            <input type="text" id="address" name="address" value="<%= contact.address %>" />
+            </p>
+            
+            <p>
+            <label>Notes</label>
+            <input type="text" id="notes" name="notes" value="<%= contact.notes %>" />
+            </p>
+
+            <button>Update</button>
+            <p><a href="/contacts/delete/<%= contact.name %>">Delete</a></p>
+        </form>
+    </body>
+</html>
