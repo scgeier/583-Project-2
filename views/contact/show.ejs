@@ -2,14 +2,20 @@
 <html>
     <head>
         <title>Contacts</title>
+    <link rel="stylesheet" type="text/css" href="../../styles.css" />
     </head>
     <body>
-        <h3><%= contact.name %></h3>
-        <form action="/contacts/<%= contact.name %>" method="POST">
-
+        <h3><%= contact.first %> <%= contact.last %></h3>
+        
+        <form action="/contacts/<%= contact.last %>" method="POST">
             <p>
-            <label>Name</label>
-            <input type="text" id="name" name="name" value="<%= contact.name %>" />
+            <label>First</label>
+            <input type="text" id="first" name="first" value="<%= contact.first %>" />
+            </p>
+            
+            <p>
+            <label>Last</label>
+            <input type="text" id="last" name="last" value="<%= contact.last %>" />
             </p>
 
             <p>
@@ -32,13 +38,28 @@
             <input type="text" id="address" name="address" value="<%= contact.address %>" />
             </p>
             
+              <p>
+            <label>City</label>
+            <input type="text" id="city" name="city" value="<%= contact.city %>" />
+            </p>
+              
+            <p>
+            <label>State</label>
+            <input type="text" id="state" name="state" value="<%= contact.state %>" />
+            </p>
+            
+            <p>
+            <label>ZIP</label>
+            <input type="text" id="zip" name="zip" value="<%= contact.zip %>" />
+            </p>
+            
             <p>
             <label>Notes</label>
             <input type="text" id="notes" name="notes" value="<%= contact.notes %>" />
             </p>
 
             <button>Update</button>
-            <p><a href="/contacts/delete/<%= contact.name %>">Delete</a></p>
+            <p><a href="/contacts/delete/<%= contact.last %>">Delete</a></p>
         </form>
     </body>
 </html>

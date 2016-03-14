@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Contacts</title>
+     <link rel="stylesheet" type="text/css" href="../../styles.css" />
     </head>
     <body>
         <h3>New Contact</h3>
@@ -9,8 +10,13 @@
         <form action="/contacts" method="POST"><!--the posted data is sent to the /contacts page-->
 
             <p>
-            <label>Name</label>
-            <input type="text" id="name" name="name" value="" />
+            <label>First Name</label>
+            <input type="text" id="first" name="first" value="" />
+            </p>
+            
+              <p>
+            <label>Last Name</label>
+            <input type="text" id="last" name="last" value="" />
             </p>
 
             <p>
@@ -31,6 +37,21 @@
             <p>
             <label>Address</label>
             <input type="text" id="address" name="address" value="" />
+            </p>
+            
+            <p>
+            <label>City</label>
+            <input type="text" id="city" name="city" value="" />
+            </p>
+            
+            <p>
+            <label>State</label>
+            <input type="text" id="state" name="state" value="" />
+            </p>
+            
+            <p>
+            <label>ZIP</label>
+            <input type="text" id="zip" name="zip" value="" />
             </p>
             
             <p>

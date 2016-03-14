@@ -2,13 +2,14 @@
 <html>
     <head>
         <title>Contacts</title>
+        <link rel="stylesheet" type="text/css" href="../../styles.css" />
     </head>
     <body>
         <h3>Contacts</h3>
         <% if (contacts.length) { %>
         <ul>
             <% for (var i in contacts) { %>
-            <li><a href="/contacts/<%= contacts[i].name %>"><%= contacts[i].name %></br><%= contacts[i].business %></a></li>
+            <li><a href="/contacts/<%= contacts[i].last %>"><%= contacts[i].first %><%= contacts[i].last %></br><%= contacts[i].business %></a></li>
             <% } %>
         </ul>
         <% } else { %>
