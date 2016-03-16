@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Contacts</title>
     <link rel="stylesheet" type="text/css" href="../../styles.css" />
+    <link rel="stylesheet" href="../../bootstrap.css" />
     </head>
     <body>
+        <nav class="navbar navbar-default butterfly">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="../../butterfly-bangla.png">
+      </a>
+    </div>
+  </div>
+</nav>
+
+<container>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+         <h2 class="title">Edit Contact</h3>
         <h3><%= contact.first %> <%= contact.last %></h3>
         
-        <form action="/contacts/<%= contact.last %>" method="POST">
+        <form action="/contacts/<%= contact.last %>" id="contact-form" method="POST">
             <p>
             <label>First</label>
             <input type="text" id="first" name="first" value="<%= contact.first %>" />
@@ -53,13 +71,16 @@
             <input type="text" id="zip" name="zip" value="<%= contact.zip %>" />
             </p>
             
-            <p>
             <label>Notes</label>
-            <input type="text" id="notes" name="notes" value="<%= contact.notes %>" />
-            </p>
+            <textarea form="contact-form" id="notes" name="notes" value="<%= contact.notes %>" /></textarea>
+        
 
             <button>Update</button>
-            <p><a href="/contacts/delete/<%= contact.last %>">Delete</a></p>
         </form>
+        
+        <p><a href="/contacts/delete/<%= contact.last %>">Delete</a></p>
+        </div>
+    </div>
+</container>
     </body>
 </html>

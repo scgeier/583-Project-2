@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Contacts</title>
         <link rel="stylesheet" type="text/css" href="../../styles.css" />
+        <link rel="stylesheet" href="../../bootstrap.css" />
     </head>
     <body>
-        <h3>Contacts</h3>
+        
+<nav class="navbar navbar-default butterfly">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="../../butterfly-bangla.png">
+      </a>
+    </div>
+  </div>
+</nav>
+
+<container>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+         <h2 class="title">Contacts</h3>
         <% if (contacts.length) { %>
-        <ul>
+        
             <% for (var i in contacts) { %>
-            <li><a href="/contacts/<%= contacts[i].last %>"><%= contacts[i].first %><%= contacts[i].last %></br><%= contacts[i].business %></a></li>
+            <div class="contact-box">
+                <a class="contact-name" href="/contacts/<%= contacts[i].last %>"><%= contacts[i].first %> <%= contacts[i].last %></a></br>
+                <a class="contact-company" href="/contacts/<%= contacts[i].last %>"><%= contacts[i].business %></a></div>
             <% } %>
-        </ul>
+       
         <% } else { %>
-        <p>Your black book is currently empty</p>
+        <h4 class="msg">Your address book is currently empty</h4>
         <% } %>
 
         <p><a href="/contact/new">Add Contact</a></p>
-    </body>
+    </div>
+   </div>
+  </container>
+ </body>
 </html>

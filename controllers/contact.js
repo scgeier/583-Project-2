@@ -30,9 +30,9 @@ exports.update = function(req, res) {
                 email: req.body.email,
                 address: req.body.address,
                 city: req.body.city,
-                state:req.body.state,
-                zip:req.body.zip,
-                notes:req.body.notes
+                state: req.body.state,
+                zip: req.body.zip,
+                notes: req.body.notes
             }
         }
     );

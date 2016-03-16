@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Contacts</title>
      <link rel="stylesheet" type="text/css" href="../../styles.css" />
+     <link rel="stylesheet" href="../../bootstrap.css" />
     </head>
     <body>
-        <h3>New Contact</h3>
+        <nav class="navbar navbar-default butterfly">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="../../butterfly-bangla.png">
+      </a>
+    </div>
+  </div>
+</nav>
 
-        <form action="/contacts" method="POST"><!--the posted data is sent to the /contacts page-->
+<container>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+         <h2 class="title">New Contact</h3>
+
+        <form action="/contacts" id="contact-form" method="POST"><!--the posted data is sent to the /contacts page-->
 
             <p>
             <label>First Name</label>
@@ -54,14 +71,16 @@
             <input type="text" id="zip" name="zip" value="" />
             </p>
             
-            <p>
+
             <label>Notes</label>
-            <input type="text" id="notes" name="notes" value="" />
-            </p>
+            <textarea form="contact-form" id="notes" name="notes" cols="40" rows="3" value="" /></textarea>
             
             <button>Create</button>
 
         </form>
+        </div>
+    </div>
+</container>
 
     </body>
 </html>

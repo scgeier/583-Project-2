@@ -1,3 +1,28 @@
-h3 {
-    color:red;
+
+.butterfly {
+    height:100px;
+}
+
+.title {
+    margin-left:40%;
+    font-family:Euphemia UCAS;
+    font-weight:900,
+}
+
+a {
+    text-decoration:none;
+}
+
+.contact-box{
+    border-bottom:1px dotted black;
+    padding-bottom:5px;
+}
+
+.contact-name{
+    color:black;
+}
+
+.contact-company{
+    color:gray;
+    font-size:0.8em;
 }
