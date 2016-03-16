@@ -9,8 +9,13 @@
     font-weight:900,
 }
 
+.msg{
+    font-famly:Bangla MN;
+}
+
 a {
     text-decoration:none;
+    color:black;
 }
 
 .contact-box{
@@ -20,9 +25,14 @@ a {
 
 .contact-name{
     color:black;
+    float:right; 
 }
 
 .contact-company{
     color:gray;
     font-size:0.8em;
+}
+
+.expanded-info{
+    font-weight:300;
 }

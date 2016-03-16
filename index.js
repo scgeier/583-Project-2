@@ -19,7 +19,7 @@ app.get('/contact/new', contact.form); //new action (for Reading the form page t
 app.post('/contacts', contact.create); //new action (for Creating the new user)
 
 app.post('/contacts/:id', contact.update); //edit action (for Updating the user info); :id tells Express to automatically use the selected user name for the name at the end of the path
-app.get('/contacts/:id', contact.show); //edit form (for Reading the update form)
+app.get('/contacts/:id', contact.show); //Read the updating form 
 
 app.get('/contacts/delete/:id', contact.remove); //delete action (for Deleting the user)
 
