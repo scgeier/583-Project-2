@@ -24,63 +24,61 @@
 <container>
     <div class="row">
         <div class="col-xs-8 col-xs-offset-2">
-         <h2 class="title">Edit Contact</h3>
-        <h3><%= contact.first %> <%= contact.last %></h3>
-        
+  
         <form action="/contacts/<%= contact.last %>" id="contact-form" method="POST">
-            <p>
-            <label>First</label>
-            <input type="text" id="first" name="first" value="<%= contact.first %>" />
-            </p>
             
-            <p>
-            <label>Last</label>
-            <input type="text" id="last" name="last" value="<%= contact.last %>" />
-            </p>
-
-            <p>
-            <label>Business</label>
-            <input type="text" id="business" name="business" value="<%= contact.business %>" />
-            </p>
-
-            <p>
-            <label>Phone</label>
-            <input type="text" id="phone" name="phone" value="<%= contact.phone %>" />
-            </p>
-            
-            <p>
-            <label>Email</label>
-            <input type="text" id="email" name="email" value="<%= contact.email %>" />
-            </p>
-            
-            <p>
-            <label>Address</label>
-            <input type="text" id="address" name="address" value="<%= contact.address %>" />
-            </p>
-            
-              <p>
-            <label>City</label>
-            <input type="text" id="city" name="city" value="<%= contact.city %>" />
-            </p>
-              
-            <p>
-            <label>State</label>
-            <input type="text" id="state" name="state" value="<%= contact.state %>" />
-            </p>
-            
-            <p>
-            <label>ZIP</label>
-            <input type="text" id="zip" name="zip" value="<%= contact.zip %>" />
-            </p>
-            
-            <label>Notes</label>
-            <textarea form="contact-form" id="notes" name="notes" value="<%= contact.notes %>" /></textarea>
+        <div class="form-group">
+         <label for="firstname">First</label>
+         <input type="text" class="form-control" id="first" name="first" value="<%= contact.first %>">
+        </div>
         
+        <div class="form-group">
+         <label for="lastname">Last</label>
+         <input type="text" class="form-control" id="last" name="last" value="<%= contact.last %>">
+        </div>
+        
+        <div class="form-group">
+         <label for="business">Company</label>
+         <input type="text" class="form-control" id="business" name="business" value="<%= contact.business %>">
+        </div>
+        
+        <div class="form-group">
+         <label for="phone">Phone</label>
+         <input type="tel" class="form-control" id="phone" name="phone" value="<%= contact.phone %>">
+        </div>
+        
+        <div class="form-group">
+         <label for="email">Email</label>
+         <input type="email" class="form-control" id="email" name="email" value="<%= contact.email %>">
+        </div>
+        
+        <div class="form-group">
+         <label for="address">Street Address</label>
+         <input type="text" class="form-control" id="address" name="address" value="<%= contact.address %>">
+        </div>
+        
+        <div class="form-group">
+         <label for="city">City</label>
+         <input type="text" class="form-control" id="city" name="city" value="<%= contact.city %>">
+        </div>
+        
+        <div class="form-group">
+         <label for="state">State</label>
+         <input type="text" class="form-control" id="state" name="state" value="<%= contact.state %>">
+        </div>
+                
+        <div class="form-group">
+         <label for="zip">ZIP Code</label>
+         <input type="number" class="form-control" id="zip" name="zip" value="<%= contact.zip %>">
+        </div>
+        
+        <label for="zip">Notes</label>
+        <textarea class="form-control" id="contact-form" name="notes" cols="40" rows="3"><%= contact.notes %></textarea>
 
-            <button>Update</button>
+        <button type="submit" class="btn btn-default">Save</button>
         </form>
         
-        <p><a href="/contacts/delete/<%= contact.last %>">Delete</a></p>
+        <button><a href="/contacts/delete/<%= contact.last %>">Delete</a></button>
         </div>
     </div>
 </container>

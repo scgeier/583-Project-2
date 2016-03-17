@@ -7,6 +7,7 @@
         <title>Contacts</title>
         <link rel="stylesheet" type="text/css" href="../../css/styles.css" />
         <link rel="stylesheet" href="../../css/bootstrap.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script type="text/javascript" src="../../js/main.js"></script>
     </head>
@@ -24,23 +25,28 @@
 
 <container>
     <div class="row">
-        <div class="col-xs-8 col-xs-offset-2">
-         <h2 class="title">Contacts</h3>
+      <div class="col-xs-8 col-xs-offset-2">
+        <div class="row">
+            <div class="col-xs-12 title">
+              <h2>Contacts</h3>
+            </div>
+        </div>
+         
         <% if (contacts.length) { %>
-         <dl class="accordion">
             <% for (var i in contacts) { %>
-            <div class="contact-box">
+        <dl class="accordion">
+         <div class="contact-box">
             <dt class="list-names">
                 <a href="#"><h4><%= contacts[i].first %> <%= contacts[i].last %></h4></a>
                 <a href="#" class="contact-company"><%= contacts[i].business %></a>
             </dt>
           
             <dt class="expanded-info">
-             <a class="contact-name" href="/contacts/<%= contacts[i].last %>">Edit</a>
+             <a class="contact-name" href="/contacts/<%= contacts[i].last %>"><i class="fa fa-pencil-square-o edit fa-lg"></i></a>
                <%= contacts[i].phone %></br>
                <%= contacts[i].email %></br>
                <%= contacts[i].address %></br>
-               <%= contacts[i].city %><%= contacts[i].state%><%= contacts[i].zip%></br>
+               <%= contacts[i].city %><%= contacts[i].state%><%= contacts[i].zip%></br></br>
                <%= contacts[i].notes%>
             </dt>
             </div>
@@ -51,7 +57,7 @@
         <h4 class="msg">Your address book is currently empty</h4>
         <% } %>
 
-        <p><a href="/contact/new">Add Contact</a></p>
+        <button><a href="/contact/new">Add Contact</a></button>
     </div>
    </div>
   </container>

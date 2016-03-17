@@ -4,13 +4,13 @@
 }
 
 .title {
-    margin-left:40%;
     font-family:Euphemia UCAS;
-    font-weight:900,
+    font-weight:900;
+    text-align:center;
 }
 
 .msg{
-    font-famly:Bangla MN;
+    font-famly:Helvetica;
 }
 
 a {
@@ -18,21 +18,25 @@ a {
     color:black;
 }
 
-.contact-box{
+.accordion {
     border-bottom:1px dotted black;
+}
+
+.contact-box{
     padding-bottom:5px;
 }
 
-.contact-name{
+.edit {
     color:black;
     float:right; 
 }
 
 .contact-company{
     color:gray;
-    font-size:0.8em;
+    font-size:0.9em;
 }
 
 .expanded-info{
     font-weight:300;
+    border-bottom:1px dotted black;
 }
