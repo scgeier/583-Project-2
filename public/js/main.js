@@ -14,4 +14,9 @@ $(document).ready(function(){
           .slideToggle();
     });
 
+
+ $("#about-link").click(function(){
+         $('#about-content').fadeToggle( "fast", "linear" );
+            });
+ 
 });

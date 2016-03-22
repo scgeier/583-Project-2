@@ -4,21 +4,27 @@
 }
 
 .title {
-    font-family:Euphemia UCAS;
+    font-family:Trebuchet MS;
     font-weight:900;
     text-align:center;
 }
 
 .msg{
     font-famly:Helvetica;
+    font-weight:300;
 }
 
-a {
+dt a {
     text-decoration:none;
     color:black;
+    font-family:Trebuchet MS;
 }
 
-.accordion {
+#empty{
+    margin-bottom:5%;
+}
+
+.accordion, #empty {
     border-bottom:1px dotted black;
 }
 
@@ -31,6 +37,11 @@ a {
     float:right; 
 }
 
+.bottom-right-save {
+    float:right;
+    border:none;
+}
+
 .contact-company{
     color:gray;
     font-size:0.9em;
@@ -39,4 +50,28 @@ a {
 .expanded-info{
     font-weight:300;
     border-bottom:1px dotted black;
+}
+
+.save {
+    float:right;
+    margin-bottom:5px;
+    border:none;
+}
+
+.delete{
+    float:right;
+}
+
+.fa-trash {
+    color:black;
+}
+
+#about{
+    margin-top:20%;
+    font-size:0.9em;
+    font-weight:300;
+}
+
+#about-content{
+    display:none;
 }

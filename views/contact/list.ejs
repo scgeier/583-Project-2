@@ -46,7 +46,7 @@
                <%= contacts[i].phone %></br>
                <%= contacts[i].email %></br>
                <%= contacts[i].address %></br>
-               <%= contacts[i].city %><%= contacts[i].state%><%= contacts[i].zip%></br></br>
+               <%= contacts[i].city %> <%= contacts[i].state%> <%= contacts[i].zip%></br></br>
                <%= contacts[i].notes%>
             </dt>
             </div>
@@ -54,12 +54,20 @@
             <% } %>
        
         <% } else { %>
+        <div id="empty">
         <h4 class="msg">Your address book is currently empty</h4>
+        </div>
         <% } %>
 
-        <button><a href="/contact/new">Add Contact</a></button>
+        <button class="btn btn-default"><a href="/contact/new">Add Contact</a></button>
+        
+        <div id="about">
+            <a href="#" id="about-link">About This Project</a>
+            <div id="about-content">This app was created as a server-side scripting assignment for the Advanced Interactive Multimedia class at the University of North Carolina at Chapel Hill. It uses Node.js, Express.js and MongoDB.</div>
+        </div>
     </div>
    </div>
+   
   </container>
  </body>
 </html>
