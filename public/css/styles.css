@@ -1,6 +1,16 @@
 
+
 .butterfly {
     height:100px;
+    padding:10px 0 0 10px;
+}
+
+.fade-line{
+    height:2px;
+    background: -webkit-linear-gradient(left, white, #660066); 
+    background: -o-linear-gradient(right, white, #660066); 
+    background: -moz-linear-gradient(right, white, #660066); 
+    background: linear-gradient(to right, white, #660066);
 }
 
 .title {
@@ -52,15 +62,10 @@ dt a {
     border-bottom:1px dotted black;
 }
 
-.save {
-    float:right;
-    margin-bottom:5px;
-    border:none;
+#save, #delete {
+    border:0px solid transparent;
 }
 
-.delete{
-    float:right;
-}
 
 .fa-trash {
     color:black;

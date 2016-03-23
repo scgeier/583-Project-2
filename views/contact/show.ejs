@@ -12,26 +12,33 @@
      <script type="text/javascript" src="../../js/main.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-default butterfly">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <img alt="Brand" src="../../img/butterfly-bangla.png">
+
+  <div class="container-fluid butterfly">
+    <div class="logo">
+      <a href="#">
+        <img alt="Logo" src="../../img/butterfly-purple.png">
       </a>
     </div>
+    <div class="fade-line"></div>
   </div>
-</nav>
 
 <container>
     <div class="row">
         <div class="col-xs-8 col-xs-offset-2">
   
-        <a href="/contacts/delete/<%= contact.last %>"><i class="fa fa-trash fa-lg delete"></i></a>
+    
         <form action="/contacts/<%= contact.last %>" id="contact-form" method="POST">
-
         
+       <div class="col-xs-8 col-md-10"></div>
+       <div class="col-xs-2 col-md-1">
+        <button type="submit" class="btn btn-default" id="save"><i class="fa fa-floppy-o fa-lg"></i></button>
+       </div>
+       <div class="col-xs-2 col-md-1">
+        <button type="button" class="btn btn-default" id="delete"><a href="/contacts/delete/<%= contact.last %>"><i class="fa fa-trash fa-lg"></i></a></button>
+       </div>
+
+         
         <div class="form-group">
-         <button type="submit" class="btn btn-default save"><i class="fa fa-floppy-o fa-lg save"></i></button>
          <label for="firstname">First</label>
          <input type="text" class="form-control" id="first" name="first" value="<%= contact.first %>">
         </div>
@@ -76,13 +83,22 @@
          <input type="number" class="form-control" id="zip" name="zip" value="<%= contact.zip %>">
         </div>
         
-        <label for="zip">Notes</label>
+        <label for="notes">Notes</label>
         <textarea class="form-control" id="contact-form" name="notes" cols="40" rows="3"><%= contact.notes %></textarea>
 
-        <button type="submit" class="btn btn-default save"><i class="fa fa-floppy-o fa-lg"></i></button>
+
+       <div class="col-xs-8 col-md-10"></div>
+       <div class="col-xs-2 col-md-1">
+        <button type="submit" class="btn btn-default" id="save"><i class="fa fa-floppy-o fa-lg"></i></button>
+       </div>
+       <div class="col-xs-2 col-md-1">
+        <button type="button" class="btn btn-default" id="delete"><a href="/contacts/delete/<%= contact.last %>"><i class="fa fa-trash fa-lg"></i></a></button>
+       </div>
+
         </form>
+
         
-        <a href="/contacts/delete/<%= contact.last %>"><i class="fa fa-trash fa-lg delete"></i></a>
+       
         </div>
     </div>
 </container>
