@@ -13,15 +13,15 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
-app.get('/contacts', contact.list); //list page 
+app.get('/contacts', contact.list); //Read the main page (the list of contacts)
 
-app.get('/contact/new', contact.form); //new action (for Reading the form page that makes a new user)
-app.post('/contacts', contact.create); //new action (for Creating the new user)
+app.get('/contact/new', contact.form); //Read the New Contact page (that makes a new entry in the address book)
+app.post('/contacts', contact.create); //Create the new contact
 
-app.post('/contacts/:id', contact.update); //edit action (for Updating the user info); :id tells Express to automatically use the selected user name for the name at the end of the path
-app.get('/contacts/:id', contact.show); //Read the updating form 
+app.post('/contacts/:id', contact.update); //Update the contact info
+app.get('/contacts/:id', contact.show); //Read the edit contact page 
 
-app.get('/contacts/delete/:id', contact.remove); //delete action (for Deleting the user)
+app.get('/contacts/delete/:id', contact.remove); //Delete a contact
 
 db.connect('mongodb://localhost:27017/test', function(err) {
     console.log("MongoDB connected...");

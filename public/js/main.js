@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 
  $("#about-link").click(function(){
-         $('#about-content').fadeToggle( "fast", "linear" );
+         $('#about-content, #minify, #maxify').fadeToggle( "fast", "linear" );
             });
  
 });

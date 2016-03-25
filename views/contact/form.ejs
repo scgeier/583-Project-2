@@ -7,8 +7,9 @@
         <title>Contacts</title>
      <link rel="stylesheet" type="text/css" href="../../css/styles.css" />
      <link rel="stylesheet" href="../../css/bootstrap.css" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       <script type="text/javascript" src="../../js/jquery-2.2.0.min.js"></script>
-        <script type="text/javascript" src="../../js/main.js"></script>
+      <script type="text/javascript" src="../../js/main.js"></script>
     </head>
     <body>
         
@@ -26,8 +27,12 @@
         <div class="col-xs-8 col-xs-offset-2">
          <h2 class="title">New Contact</h3>
 
-        <form action="/contacts" id="contact-form" method="POST"><!--the posted data is sent to the /contacts page-->
-
+        <form action="/contacts" id="contact-form" method="POST">
+         <div class="col-xs-10 col-md-11"></div>
+          <div class="col-xs-2 col-md-1">
+          <button type="submit" class="btn btn-default" id="save"><i class="fa fa-floppy-o fa-lg"></i></button>
+          </div>
+          
         <div class="form-group">
          <label for="firstname">First</label>
          <input type="text" class="form-control" id="first" name="first" placeholder="First Name" value="">
@@ -76,7 +81,10 @@
         <label for="zip">Notes</label>
         <textarea class="form-control" id="contact-form" name="notes" cols="40" rows="3"></textarea>
 
-        <button type="submit" class="btn btn-default">Submit</button>
+        <div class="col-xs-10 col-md-11"></div>
+          <div class="col-xs-2 col-md-1">
+          <button type="submit" class="btn btn-default" id="save"><i class="fa fa-floppy-o fa-lg"></i></button>
+          </div>
         </form>
         </div>
     </div>

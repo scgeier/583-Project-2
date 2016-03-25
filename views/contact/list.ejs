@@ -27,7 +27,7 @@
       <div class="col-xs-8 col-xs-offset-2">
         <div class="row">
             <div class="col-xs-12 title">
-              <h2>Contacts</h3>
+              <h2><strong>Contacts</strong></h3>
             </div>
         </div>
          
@@ -36,17 +36,17 @@
         <dl class="accordion">
          <div class="contact-box">
             <dt class="list-names">
-                <a href="#"><h4><%= contacts[i].first %> <%= contacts[i].last %></h4></a>
+                <a href="#"><h4><strong><%= contacts[i].first %> <%= contacts[i].last %></strong></h4></a>
                 <a href="#" class="contact-company"><%= contacts[i].business %></a>
             </dt>
           
             <dt class="expanded-info">
              <a class="contact-name" href="/contacts/<%= contacts[i].last %>"><i class="fa fa-pencil-square-o edit fa-lg"></i></a>
-               <%= contacts[i].phone %></br>
+              <p class="contact-content"><%= contacts[i].phone %></br>
                <%= contacts[i].email %></br>
                <%= contacts[i].address %></br>
                <%= contacts[i].city %> <%= contacts[i].state%> <%= contacts[i].zip%></br></br>
-               <%= contacts[i].notes%>
+               <%= contacts[i].notes%></p>
             </dt>
             </div>
          </dl>
@@ -58,11 +58,11 @@
         </div>
         <% } %>
 
-        <button class="btn btn-default"><a href="/contact/new">Add Contact</a></button>
+        <button class="btn btn-default" id="add"><a href="/contact/new">Add Contact</a></button>
         
         <div id="about">
-            <a href="#" id="about-link">About This Project</a>
-            <div id="about-content">This app was created as a server-side scripting assignment for the Advanced Interactive Multimedia class at the University of North Carolina at Chapel Hill. It uses Node.js, Express.js and MongoDB.</div>
+            <a href="#" id="about-link">About This Project <i class="fa fa-plus" id="maxify"></i><i class="fa fa-minus" id="minify"></i></a>
+            <div id="about-content">Hi, I'm Scott Geier. I created this app as a server-side scripting assignment for the Advanced Interactive Multimedia class at the University of North Carolina at Chapel Hill. My goal was to use Node.js, Express.js and MongoDB to build a customer relationship management app for a fictitious business. I designed the logo with Illustrator.</div>
         </div>
     </div>
    </div>
